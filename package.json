@@ -1,0 +1,121 @@
+{
+  "name": "react-color-theme",
+  "version": "0.0.1",
+  "description": "Hook-based color theme for react",
+  "main": "build/react-color-theme.js",
+  "types": "types/",
+  "scripts": {
+    "lint": "eslint . --fix",
+    "format": "prettier --write .",
+    "jest": "jest --passWithNoTests",
+    "test": "npm run lint && npm run format && npm run jest",
+    "tsc": "rm -r types/; tsc",
+    "build": "npm run tsc && webpack --mode=production",
+    "dev": "webpack --mode=development --watch",
+    "prepare": "npm run build && husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goodleby/react-color-theme.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Alex Chebotarsky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/goodleby/react-color-theme/issues"
+  },
+  "homepage": "https://github.com/goodleby/react-color-theme#readme",
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "node": true,
+      "jest/globals": true
+    },
+    "extends": [
+      "airbnb-base",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:jest/recommended",
+      "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "jest"
+    ],
+    "rules": {
+      "no-console": "off",
+      "no-plusplus": "off",
+      "no-return-assign": "off",
+      "import/prefer-default-export": "off",
+      "import/extensions": "off",
+      "no-shadow": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-var-requires": "off",
+      "@typescript-eslint/no-shadow": "error"
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".js",
+            ".jsx",
+            ".ts",
+            ".tsx"
+          ]
+        }
+      }
+    },
+    "ignorePatterns": [
+      "/build",
+      "/tmp",
+      "/node_modules",
+      "/types",
+      "/coverage"
+    ]
+  },
+  "browserslist": "defaults",
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "coverageProvider": "v8",
+    "errorOnDeprecated": true
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/jest": "^26.0.24",
+    "@types/react": "^17.0.16",
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.2.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-jest": "^24.4.0",
+    "husky": "^7.0.1",
+    "jest": "^27.0.6",
+    "mini-css-extract-plugin": "^2.2.0",
+    "prettier": "^2.3.2",
+    "sass": "^1.37.5",
+    "sass-loader": "^12.1.0",
+    "typescript": "^4.3.5",
+    "webpack": "^5.49.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "react": "^17.0.2"
+  }
+}
