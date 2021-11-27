@@ -68,7 +68,7 @@ module.exports = {
   },
   plugins: [new MiniCssExtractPlugin(), new BannerPlugin(banner)],
   resolve: {
-    extensions: ['.js', '.ts', '.json'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
   },
   module: {
     rules: [
@@ -81,7 +81,7 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.[tj]s$/,
+        test: /\.[tj]sx?$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
       },

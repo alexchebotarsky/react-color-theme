@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 const defaultName = 'main';
 
@@ -19,7 +19,7 @@ export const createTheming = <T extends { [color: string]: string }, N>(
   const ThemeContext = React.createContext<keyof typeof themes | null>(null);
 
   const useTheme = (themeName?: keyof typeof themes) => {
-    const contextName = useContext(ThemeContext);
+    const contextName = React.useContext(ThemeContext);
 
     if (!themeName && contextName === null) {
       console.warn(
