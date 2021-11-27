@@ -4,7 +4,7 @@ object-assign
 @license MIT
 */
 
-/*! @link https://github.com/goodleby/react-color-theme#readme, @version 0.0.1, @licence MIT */
+/*! @link https://github.com/goodleby/react-color-theme#readme, @version 0.0.8, @licence MIT */
 
 /** @license React v17.0.2
  * react.production.min.js
