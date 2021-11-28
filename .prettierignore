@@ -1,14 +1,14 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+## See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
+## dependencies
 node_modules/
 
-# testing
+## testing
 coverage/
 
-# production
+## production
 build/
 types/
 
-# misc
+## misc
 .DS_Store
