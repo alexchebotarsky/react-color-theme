@@ -50,7 +50,7 @@ export const App = () => {
   useEffect(() => {
     // Your theme name determining logic
     setThemeName('light');
-  }, [themeName]);
+  }, []);
 
   return (
     <ThemeProvider value={themeName}>
@@ -92,7 +92,7 @@ And that is it! Switching from dark to light modes should be as easy as changing
 
 - Unfortunately, if you call `useTheme` in the same file where you render the theme provider it will not work properly. Because at the moment the hook is invoked, theme name is not yet set, so it will fallback to default theme and warn you in console about this case.
 
-  It is recommended to refactor your code to avoid needing to use themes in the file where render the theme provider, but if it is not possible, you can pass theme name directly to `useTheme` hook as a parameter. So a fix would be:
+  It is recommended to refactor your code to avoid needing to use themes in the file where the theme provider is rendered, but if it is not possible, you can pass theme name directly to `useTheme` hook as a parameter. So a fix would be:
 
 ```jsx
 export const App = () => {
@@ -102,7 +102,7 @@ export const App = () => {
   useEffect(() => {
     // Your theme name determining logic
     setThemeName('light');
-  }, [themeName]);
+  });
 
   return <ThemeProvider value={themeName}>{/* ... */}</ThemeProvider>;
 };
