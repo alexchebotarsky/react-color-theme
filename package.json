@@ -1,6 +1,6 @@
 {
   "name": "react-color-theme",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple hook-based color theming for React with TypeScript support",
   "main": "build/react-color-theme.js",
   "types": "types/",
@@ -65,7 +65,7 @@
     "@types/react": "^18.0.12",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
-    "eslint-config-goodleby": "^1.0.0",
+    "eslint-config-goodleby": "^1.0.1",
     "husky": "^8.0.1",
     "jest": "^28.1.1",
     "jest-environment-jsdom": "^28.1.1",
