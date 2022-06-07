@@ -102,13 +102,13 @@ export const App = () => {
   useEffect(() => {
     // Your theme name determining logic
     setThemeName('light');
-  });
+  }, []);
 
   return <ThemeProvider value={themeName}>{/* ... */}</ThemeProvider>;
 };
 ```
 
-## Do you have TypesScript support?
+## Do you have TypeScript support?
 
 - Indeed we do! Defining your themes made easy with type hints from your IDE. Also `ThemeProvider` expects to get a union of theme names, so in order to pass a string to it be sure to convert it to one of themes keys first. You can use `keyof typeof themes` type to do that, this general `themes` object is exposed for simplifying work with types. So when working with theme name you can do something like that:
 
