@@ -1,5 +1,4 @@
 {
-  "exclude": ["**/*.test.ts", "**/*.spec.ts"],
   "include": ["src/"],
   "compilerOptions": {
     "allowJs": true,
@@ -8,7 +7,7 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "module": "ESNext",
+    "module": "ES2015",
     "removeComments": true,
     "target": "ES2015",
     "strict": true,

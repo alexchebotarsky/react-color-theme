@@ -27,7 +27,7 @@ export const createTheming = <T extends { [color: string]: string }, N>(
       );
     }
 
-    const name = themeName || contextName || defaultName;
+    const name = themeName ?? contextName ?? defaultName;
 
     return name === defaultName
       ? themes[defaultName]

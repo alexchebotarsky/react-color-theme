@@ -6,10 +6,22 @@ node_modules/
 # testing
 coverage/
 
-# production
-build/
-types/
-
 # misc
 .DS_Store
 .eslintcache
+
+# git tools
+.github
+.husky
+
+# IDE setup
+.vscode
+
+# ignore files
+.prettierignore
+
+# configs
+.babelrc
+.eslintrc.js
+tsconfig.json
+webpack.config.js
